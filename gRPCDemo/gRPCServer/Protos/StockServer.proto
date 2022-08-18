@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPCDemoServer";
+
+import "google/protobuf/empty.proto";
+
+package gRPCDemo;
+
+service StockServer {
+	rpc GetValueByName(ValueByNameRequest) returns (StockResult);
+	rpc GetAllStockValues(google.protobuf.Empty) returns (StockResponses); 
+	rpc GetStockValue(ValueByNameRequest) returns (stream StockResult);
+}
+
+message ValueByNameRequest {
+	string StockName=1;
+}
+
+message StockResult {
+	int32 Value=1;
+	string Name=2;
+}
+
+message StockResponses {
+	repeated StockResult Result = 1;
+}

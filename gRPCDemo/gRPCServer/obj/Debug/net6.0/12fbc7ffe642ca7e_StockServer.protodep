@@ -1,0 +1,3 @@
+obj\Debug\net6.0\Protos/StockServer.cs \
+obj\Debug\net6.0\Protos/StockServerGrpc.cs: C:/Users/EdwinGuruSingh/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/empty.proto\
+ Protos/StockServer.proto
